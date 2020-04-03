@@ -43,9 +43,6 @@ export const errorHandler = (err, req, res, next) => {
 
 const coustomErrorHandler = (err, res) => {
 
-    // NaN
-    if (err && err.original && (err.original.sqlMessage).includes("'NaN'"))
-        err.status = status_codes.BAD_REQUEST, err.message = response_messages.INVALID_DATA_TYPE
     // stateId
     if (err && err.original && (err.original.sqlMessage).includes("'stateId'"))
         err.status = status_codes.BAD_REQUEST, err.message = response_messages.INVALID_ID.replace("{subject}", "stateId")
@@ -63,9 +60,9 @@ const coustomErrorHandler = (err, res) => {
         err.status = status_codes.BAD_REQUEST, err.message = response_messages.INVALID_ID.replace("{subject}", "Zone")
     else if (err && err.original && (err.original.sqlMessage).includes("'ward_ulb_id_ward_number'"))
         err.status = status_codes.BAD_REQUEST, err.message = response_messages.DUBLICATE_KEY.replace("{subject}", "ULB or Ward Number")
-    if (!err.status){
-            err.status = 400;
-    } 
+    if (!err.status) {
+        err.status = 400;
+    }
 
     res.json({
         responseCode: err.status,

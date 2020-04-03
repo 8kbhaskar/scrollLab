@@ -1,8 +1,8 @@
 
-import { AboutCO } from './AboutCO';
+import { RegistrationOneCO } from './RegistrationOneCO';
 
 
 export {
-                AboutCO
+                RegistrationOneCO
 
 };

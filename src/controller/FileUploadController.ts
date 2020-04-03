@@ -2,7 +2,6 @@ require('dotenv').config()
 const { STATICS_FILES } = process.env;
 import { Router } from 'express'
 import { validateAdd } from '../validators/index'
-import { AboutService } from '../service'
 import { responseHandler, errorResponseHandler, successResponseHandler } from '../responseHandler'
 import { status_codes, response_messages } from '../constants'
 import { GateWayHandler } from '../middileware'

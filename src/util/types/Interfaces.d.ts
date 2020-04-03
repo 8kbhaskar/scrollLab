@@ -1,5 +1,4 @@
 import { Request } from 'express';
-import { IUserModel } from '../types/Models';
 
 declare module '*.png' {
     const value: string;

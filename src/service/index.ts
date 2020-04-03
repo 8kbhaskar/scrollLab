@@ -2,7 +2,7 @@
 // import * as mySqlService from './UserServiceMySql'
 // export { mySqlService};
 
-import * as AboutService from './AboutService';
+import * as RegistrationService from './RegistrationService';
 export {
-    AboutService
+    RegistrationService
 }

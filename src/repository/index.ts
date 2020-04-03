@@ -2,9 +2,9 @@
 // import * as mySqlRepository from './UserRepositoryMySql'
 // export { mySqlRepository };
 
-import * as AboutRepository from './AboutRepository';
+import * as RegistrationRepository from './RegistrationRepository';
 
 export {
-    AboutRepository
+    RegistrationRepository
 }
 

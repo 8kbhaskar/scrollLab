@@ -7,7 +7,7 @@ import { errorHandler } from './responseHandler';
 import { mongo_connection } from './config';
 
 import {
-    FileUploadController, CategoryController
+    FileUploadController, CategoryController, RegistrationController
 } from './controller';
 import fs from 'fs'
 import path from 'path'
@@ -52,6 +52,7 @@ export const checkFolder = (path) => {
 
 
 app.use('/category', CategoryController)
+app.use('/auth', RegistrationController)
 
 app.use('/upload', FileUploadController);
 
